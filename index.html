@@ -70,5 +70,555 @@
     <tr><td>15</td><td>100 %</td><td>Coffre totalement rempli (27 piles de 64 objets)</td></tr>
   </tbody>
 </table></center>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <title>Commandes MinecraftOnline - Diamond Kit et suivants</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        section {
+            background: white;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .command {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: monospace;
+            cursor: pointer;
+        }
+        .tooltip {
+            visibility: hidden;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 5px 8px;
+            border-radius: 4px;
+            position: absolute;
+            z-index: 1;
+            font-size: 12px;
+            margin-top: -30px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .command-wrapper {
+            display: inline-block;
+            position: relative;
+        }
+        .command-wrapper.show-tooltip .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Commandes MinecraftOnline - Kits et descriptions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 70px;
+            background-color: #f9f9f9;
+            color: #2c3e50;
+        }
+        h1, h2 {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+            margin-bottom: 5px;
+        }
+        th, td {
+            padding: 10px 5px;
+            border-bottom: 1px solid #ddd;
+            vertical-align: top;
+        }
+        th {
+            background-color: #34495e;
+            color: white;
+            text-align: left;
+        }
+        .command {
+            background-color: #eee;
+            padding: 5px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+        .tooltip {
+            visibility: show;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 4px 7px;
+            border-radius: 4px;
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            white-space: nowrap;
+            z-index: 1;
+        }
+        .command.show-tooltip .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        tr:nth-child(even) {
+            background-color: #f7f9fa;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Commandes MinecraftOnline par kit</h1>
+
+    <section>
+        <h2>Wood Kit</h2>
+        <table>
+            <thead>
+                <tr><th>Commande</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="command">/kit woodtools<span class="tooltip">Copié !</span></span></td>
+                    <td>Set complet d’outils en bois chaque heure</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/kit leatherarmour<span class="tooltip">Copié !</span></span></td>
+                    <td>Set complet d’armure en cuir chaque heure</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/craftnote<span class="tooltip">Copié !</span></span></td>
+                    <td>Créer des notes personnalisées (papier et encre requis)</td>
+                </tr>
+                <tr>
+                    <td>
+                      <span class="command">/warp donorlounge<span class="tooltip">Copié !</span></span><br>
+                      <span class="command">/warp newdonorlounge<span class="tooltip">Copié !</span></span>
+                    </td>
+                    <td>Accès aux salons Donor</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/lwc<span class="tooltip">Copié !</span></span></td>
+                    <td>Verrouiller jusqu’à 3 coffres</td>
+                </tr>
+                <tr>
+                    <td>—</td>
+                    <td>Une étoile dorée affichée à côté du nom dans le chat</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Stone Kit</h2>
+        <table>
+            <thead>
+                <tr><th>Commande</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Toutes les commandes du Wood Kit</td><td>Incluses</td></tr>
+                <tr>
+                    <td><span class="command">/kit stonetools<span class="tooltip">Copié !</span></span></td>
+                    <td>Set complet d’outils en pierre chaque heure</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/kit chainmailarmour<span class="tooltip">Copié !</span></span></td>
+                    <td>Set complet d’armure en mailles chaque heure</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/descend<span class="tooltip">Copié !</span></span></td>
+                    <td>Se téléporter instantanément un niveau en dessous (utile pour miner)</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/lwc<span class="tooltip">Copié !</span></span></td>
+                    <td>Verrouiller jusqu’à 4 coffres</td>
+                </tr>
+                <tr>
+                    <td>—</td>
+                    <td>Deux étoiles dorées dans le chat</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Iron Kit</h2>
+        <table>
+            <thead>
+                <tr><th>Commande</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Toutes les commandes des Kits Wood et Stone</td><td>Incluses</td></tr>
+                <tr>
+                    <td><span class="command">/kit irontools<span class="tooltip">Copié !</span></span></td>
+                    <td>Set complet d’outils en fer chaque heure</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/kit ironarmour<span class="tooltip">Copié !</span></span></td>
+                    <td>Set complet d’armure en fer chaque heure</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/thru<span class="tooltip">Copié !</span></span></td>
+                    <td>Téléportation instantanée à travers un mur devant soi</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/lwc<span class="tooltip">Copié !</span></span></td>
+                    <td>Verrouiller jusqu’à 5 coffres</td>
+                </tr>
+                <tr>
+                    <td>—</td>
+                    <td>Trois étoiles dorées dans le chat</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Gold Kit</h2>
+        <table>
+            <thead>
+                <tr><th>Commande</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Toutes les commandes des Kits précédents (Wood, Stone, Iron)</td><td>Incluses</td></tr>
+                <tr>
+                    <td><span class="command">/kit goldtools<span class="tooltip">Copié !</span></span></td>
+                    <td>Set complet d’outils en or chaque heure</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/kit goldarmour<span class="tooltip">Copié !</span></span></td>
+                    <td>Set complet d’armure en or chaque heure</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/kit misctools<span class="tooltip">Copié !</span></span></td>
+                    <td>Kit d’outils divers (horloge, boussole, seau, selle, arc, canne à pêche, cisailles) avec cooldown 1h</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/ascend<span class="tooltip">Copié !</span></span></td>
+                    <td>Se téléporter instantanément un niveau au-dessus</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/lwc<span class="tooltip">Copié !</span></span></td>
+                    <td>Verrouiller jusqu’à 6 coffres</td>
+                </tr>
+                <tr>
+                    <td>—</td>
+                    <td>Quatre étoiles dorées dans le chat</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Diamond Kit</h2>
+        <table>
+            <thead>
+                <tr><th>Commande</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Toutes les commandes des Kits précédents (Wood, Stone, Iron, Gold)</td><td>Incluses</td></tr>
+                <tr>
+                    <td><span class="command">/kit diamondtools<span class="tooltip">Copié !</span></span></td>
+                    <td>Set complet d’outils en diamant chaque heure</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/kit diamondarmour<span class="tooltip">Copié !</span></span></td>
+                    <td>Set complet d’armure en diamant chaque heure</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/heal<span class="tooltip">Copié !</span></span></td>
+                    <td>Régénère instantanément la santé (cooldown 5s, peut blesser si utilisé trop tôt)</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/jumpto<span class="tooltip">Copié !</span></span></td>
+                    <td>Téléportation instantanée où l’on regarde (exploration et construction)</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/lwc<span class="tooltip">Copié !</span></span></td>
+                    <td>Verrouiller jusqu’à 7 coffres</td>
+                </tr>
+                <tr>
+                    <td>—</td>
+                    <td>Cinq étoiles dorées dans le chat</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Obsidian Kit</h2>
+        <table>
+            <thead>
+                <tr><th>Commande</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Toutes les commandes du Diamond Kit</td><td>Incluses</td></tr>
+                <tr>
+                    <td><span class="command">/teleport<span class="tooltip">Copié !</span></span></td>
+                    <td>Téléportation instantanée vers un joueur avec consentement</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/summon<span class="tooltip">Copié !</span></span></td>
+                    <td>Inviter un joueur vers soi (avec consentement)</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/clearrequests<span class="tooltip">Copié !</span></span></td>
+                    <td>Effacer les requêtes de téléportation</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/tpto<span class="tooltip">Copié !</span></span></td>
+                    <td>Téléporter aux alias ou coordonnées (cooldown 60s)</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/unstuck<span class="tooltip">Copié !</span></span></td>
+                    <td>Sortir si bloqué dans un mur</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/up<span class="tooltip">Copié !</span></span> et <span class="command">/ceil<span class="tooltip">Copié !</span></span></td>
+                    <td>S’élever et placer un bloc de verre sous soi (cooldown 15s)</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/lwc<span class="tooltip">Copié !</span></span></td>
+                    <td>Verrouiller jusqu’à 8 coffres</td>
+                </tr>
+                <tr>
+                    <td>—</td>
+                    <td>Cinq étoiles violettes dans le chat</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Nether Kit</h2>
+        <table>
+            <thead>
+                <tr><th>Commande</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Toutes les commandes de l’Obsidian Kit</td><td>Incluses</td></tr>
+                <tr><td>Commandes de téléportation fonctionnent dans le Nether</td><td>—</td></tr>
+                <tr>
+                    <td><span class="command">/kit fire<span class="tooltip">Copié !</span></span></td>
+                    <td>Kit briquet toutes les 2 heures</td>
+                </tr>
+                <tr><td>Utilisation du briquet et des charges de feu</td><td>—</td></tr>
+                <tr>
+                    <td><span class="command">/lwc<span class="tooltip">Copié !</span></span></td>
+                    <td>Verrouiller jusqu’à 9 coffres</td>
+                </tr>
+                <tr>
+                    <td>—</td>
+                    <td>Cinq étoiles rouges dans le chat</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Aether Kit</h2>
+        <table>
+            <thead>
+                <tr><th>Commande</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Toutes les commandes du Nether Kit</td><td>Incluses</td></tr>
+                <tr><td>Commandes de téléportation fonctionnent dans l’End</td><td>—</td></tr>
+                <tr>
+                    <td><span class="command">/heal<span class="tooltip">Copié !</span></span> utilisable sur d’autres joueurs</td>
+                    <td>Régénération de santé pour soi et les autres</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/feed<span class="tooltip">Copié !</span></span> (cooldown 30s) utilisable sur d’autres joueurs</td>
+                    <td>Remplir la barre de faim</td>
+                </tr>
+                <tr><td>Construction de sièges de soin <code>[Sit Heal]</code></td><td>—</td></tr>
+                <tr>
+                    <td><span class="command">/chill<span class="tooltip">Copié !</span></span> (cooldown 10s)</td>
+                    <td>Geler l’eau à proximité</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/heatwave<span class="tooltip">Copié !</span></span> (cooldown 20s)</td>
+                    <td>Dégeler glace et neige</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/drought<span class="tooltip">Copié !</span></span> (cooldown 10s)</td>
+                    <td>Vider eau et lave</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/smoothwater<span class="tooltip">Copié !</span></span> (cooldown 20s)</td>
+                    <td>Aplanir l’eau</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/slaughter<span class="tooltip">Copié !</span></span> (cooldown 30s)</td>
+                    <td>Tuer tous les mobs dans un rayon de 15 blocs (les mobs renommés sont immunisés)</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/grassify<span class="tooltip">Copié !</span></span> (cooldown 30mn)</td>
+                    <td>Transformer la terre nue en herbe</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/lwc<span class="tooltip">Copié !</span></span></td>
+                    <td>Verrouiller jusqu’à 10 coffres</td>
+                </tr>
+                <tr>
+                    <td>—</td>
+                    <td>Cinq étoiles bleues dans le chat</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Demigod Kit</h2>
+        <table>
+            <thead>
+                <tr><th>Commande</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Toutes les commandes de l’Aether Kit</td><td>Incluses</td></tr>
+                <tr><td>Cooldowns réduits de moitié sur toutes les commandes de voyage</td><td>—</td></tr>
+                <tr><td>Double portée pour <code>/slaughter</code></td><td>—</td></tr>
+                <tr>
+                    <td><span class="command">/kit craftbook<span class="tooltip">Copié !</span></span> (cooldown 30mn)</td>
+                    <td>Kit d’items pour CraftBook</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/smoothlava<span class="tooltip">Copié !</span></span> (cooldown 15s)</td>
+                    <td>Corrige les surfaces de lave</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/mycelify<span class="tooltip">Copié !</span></span> (cooldown 15mn)</td>
+                    <td>Transforme la terre en mycélium</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/randomgift<span class="tooltip">Copié !</span></span> (cooldown 5mn)</td>
+                    <td>Recevoir un item aléatoire</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/pet<span class="tooltip">Copié !</span></span> (cooldown 10mn)</td>
+                    <td>Invoquer un animal apprivoisé</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/potions<span class="tooltip">Copié !</span></span> (cooldown 5mn)</td>
+                    <td>Effets de potions positifs</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/milk<span class="tooltip">Copié !</span></span> (cooldown 5mn)</td>
+                    <td>Enlever les effets de potions</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/toast<span class="tooltip">Copié !</span></span> (cooldown 1m30s)</td>
+                    <td>Mettre un joueur en feu</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/demigod<span class="tooltip">Copié !</span></span> (cooldown 7m30s)</td>
+                    <td>Invulnérabilité temporaire 20s</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/lwc<span class="tooltip">Copié !</span></span></td>
+                    <td>Verrouiller jusqu’à 15 coffres</td>
+                </tr>
+                <tr>
+                    <td><code>/craft</code>, <code>/anvil</code>, <code>/echest</code></td>
+                    <td>Ouvrir interface table craft, enclume ou ender chest à distance</td>
+                </tr>
+                <tr>
+                    <td>—</td>
+                    <td>Cinq étoiles blanches dans le chat</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>God Kit</h2>
+        <table>
+            <thead>
+                <tr><th>Commande</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Toutes les commandes du Demigod Kit sans cooldowns</td><td>Incluses</td></tr>
+                <tr><td><span class="command">God stick</span> : bâton transformé en outil de suppression instantanée de blocs, durabilité illimitée</td><td>—</td></tr>
+                <tr><td>Les épées en or créent des éclairs dans la direction regardée</td><td>—</td></tr>
+                <tr><td><span class="command">/wrathofthunder<span class="tooltip">Copié !</span></span></td><td>Foudroie un joueur</td></tr>
+                <tr><td><span class="command">/give<span class="tooltip">Copié !</span></span></td><td>Donner instantanément des items (non transmissibles aux autres)</td></tr>
+                <tr><td><span class="command">/clearinventory<span class="tooltip">Copié !</span></span></td><td>Vider inventaire</td></tr>
+                <tr><td><span class="command">/spawnmob<span class="tooltip">Copié !</span></span></td><td>Invoquer n’importe quel animal ou monstre</td></tr>
+                <tr><td><span class="command">/givexp<span class="tooltip">Copié !</span></span></td><td>Donner de l’expérience instantanément</td></tr>
+                <tr><td><span class="command">/time day</span> et <span class="command">/time night</span></td><td>Changer le temps</td></tr>
+                <tr><td><span class="command">/god<span class="tooltip">Copié !</span></span></td><td>Invulnérabilité</td></tr>
+                <tr><td><span class="command">/tp<span class="tooltip">Copié !</span></span></td><td>Téléportation vers un joueur</td></tr>
+                <tr><td><span class="command">/tphere<span class="tooltip">Copié !</span></span></td><td>Téléporter un joueur à soi</td></tr>
+                <tr><td><span class="command">//</span> et <span class="command">/sp</span> : superpic, pioche à effet zone</td><td>—</td></tr>
+                <tr><td><span class="command">/lwc<span class="tooltip">Copié !</span></span></td><td>Verrouiller jusqu’à 30 coffres</td></tr>
+                <tr><td>Préfixe par défaut <code>***GOD***</code> dans le chat</td><td>—</td></tr>
+                <tr><td><span class="command">/setprefix<span class="tooltip">Copié !</span></span></td><td>Personnaliser préfixe et couleur du nom</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Supergod Kit</h2>
+        <table>
+            <thead>
+                <tr><th>Commande</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Toutes les commandes du God Kit</td><td>Incluses</td></tr>
+                <tr><td>Toutes les commandes WorldEdit</td><td>—</td></tr>
+                <tr><td>Mode créatif</td><td>—</td></tr>
+                <tr><td>Monde privé (sous réserve de disponibilité)</td><td>—</td></tr>
+                <tr><td>Formats supplémentaires pour <code>/setprefix</code> (gras, souligné, barré, texte obfusqué)</td><td>—</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+<script>
+    document.querySelectorAll('.command').forEach(cmd => {
+        cmd.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+            const textToCopy = cmd.textContent;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                cmd.classList.add('show-tooltip');
+                setTimeout(() => {
+                    cmd.classList.remove('show-tooltip');
+                }, 1000);
+            }).catch(() => {
+                alert('Impossible de copier le texte.');
+            });
+        });
+    });
+</script>
+
+</body>
 </html>
+
+
